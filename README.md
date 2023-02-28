@@ -7,3 +7,4 @@ commands  :
 /changegrowid
 /ping
 /buyaccount [amount]
+/deposit
