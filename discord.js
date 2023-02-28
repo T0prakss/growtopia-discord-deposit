@@ -147,7 +147,7 @@ client.on('message', async (message) => {
       const totalCost = amount * 250;
   
       if (balance < totalCost) {
-        return message.reply(`You don't have enough balance. The total cost for ${amount} account(s) is ${totalCost} coins.`);
+        return message.reply(`You don't have enough balance. The total cost for ${amount} account(s) is ${totalCost} Wls.`);
       }
   
       // Deduct balance from user's account
@@ -169,7 +169,7 @@ client.on('message', async (message) => {
       }
   
       message.author.send(`Here are your ${amount} account(s):\n\n${accountsText}`);
-      message.reply(`Successfully bought ${amount} account(s) for ${totalCost} coins. Check your DMs for the account information.`);
+      message.reply(`Successfully bought ${amount} account(s) for ${totalCost} Wls. Check your DMs for the account information.`);
     } catch (error) {
       console.error(error);
       message.reply('An error occurred while buying accounts.');
@@ -192,7 +192,7 @@ client.on('message', async (message) => {
 
       if (rows.length > 0) {
         const balance = rows[0].balance;
-        message.reply(`Your balance is ${balance} coins.`);
+        message.reply(`Your balance is ${balance} Wls.`);
       } else {
         message.reply('You have not set your GrowID yet.');
       }
